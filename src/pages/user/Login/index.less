@@ -3,9 +3,35 @@
 .container {
   display: flex;
   flex-direction: column;
+  // justify-content: space-between;
   height: 100vh;
   overflow: auto;
   background: @layout-body-background;
+}
+
+.login_content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  h3 {
+    margin-bottom: 0;
+    color: @primary-color;
+    font-size: 80px;
+    text-align: center;
+  }
+  p {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 16px;
+    line-height: 33.56px;
+    text-align: center;
+  }
 }
 
 .lang {
@@ -20,7 +46,10 @@
 
 .content {
   flex: 1;
-  padding: 32px 0;
+  width: 50%;
+  // padding: 32px 0;
+  height: 100%;
+  background-color: #fff;
 }
 
 @media (min-width: @screen-md-min) {
@@ -32,7 +61,7 @@
   }
 
   .content {
-    padding: 32px 0 24px;
+    // padding: 32px 0 24px;
   }
 }
 
@@ -46,5 +75,11 @@
 
   &:hover {
     color: @primary-color;
+  }
+}
+
+:global {
+  .ant-pro-form-login-container {
+    justify-content: center;
   }
 }

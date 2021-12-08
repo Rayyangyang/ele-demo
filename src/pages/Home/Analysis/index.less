@@ -1,0 +1,80 @@
+@import '~antd/lib/style/themes/default.less';
+
+.analysis_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .top_card,
+  .bottom_card {
+    display: flex;
+  }
+
+  .top_card {
+    height: 50%;
+    margin-bottom: 20px;
+  }
+  .bottom_card {
+    height: 50%;
+  }
+
+  .ant-card-body {
+    height: 100%;
+  }
+  .project_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    > div {
+      width: 33.33%;
+      height: 50%;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    > div:nth-of-type(odd) {
+      border-right: 0px;
+      border-left: 0px;
+    }
+    > div:nth-of-type(4) {
+      border-top: 0px;
+      border-left: 0px;
+    }
+    > div:nth-of-type(6) {
+      border-top: 0px;
+      border-right: 0px;
+    }
+    > div:nth-of-type(5) {
+      border-top: 0px;
+    }
+    .project_top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: rgba(24, 144, 255, 1);
+      p {
+        margin: 0px;
+        margin-left: 8px;
+        font-size: 14px;
+      }
+    }
+    .project_desc {
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 14px;
+      line-height: 22px;
+    }
+    .project_bottom {
+      display: flex;
+      justify-content: space-between;
+      .project_team {
+        color: rgba(0, 0, 0, 0.45);
+        font-size: 12px;
+        line-height: 20px;
+      }
+      .project_time {
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}

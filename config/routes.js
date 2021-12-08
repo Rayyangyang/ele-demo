@@ -48,6 +48,26 @@ export default [
     path: '/list',
     component: './TableList',
   },
+
+  {
+    path: '/home',
+    name: 'home',
+    icon: 'crown',
+    access: 'canAdmin',
+    routes: [
+      {
+        path: '/home/analysis',
+        name: 'analysis',
+        component: './Home/Analysis',
+      },
+      {
+        path: '/home/Analysis/allProject',
+        // name: 'allProject',
+        component: './Home/Analysis/AllProject',
+      },
+    ],
+  },
+
   {
     path: '/',
     redirect: '/welcome',

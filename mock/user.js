@@ -206,5 +206,313 @@ export default {
       path: '/base/category/list',
     });
   },
+  // 资产配置达成
+  'GET /api/assetsConfig': (req, res) => {
+    if (!getAccess()) {
+      res.status(401).send({
+        data: {
+          isLogin: false,
+        },
+        errorCode: '401',
+        errorMessage: '请先登录！',
+        success: true,
+      });
+      return;
+    }
+
+    res.send({
+      success: true,
+      data: {
+        category: [
+          {
+            type: '分类一',
+            value: 27,
+          },
+          {
+            type: '分类二',
+            value: 25,
+          },
+          {
+            type: '分类三',
+            value: 18,
+          },
+          {
+            type: '分类四',
+            value: 15,
+          },
+          {
+            type: '分类五',
+            value: 10,
+          },
+          {
+            type: '其他',
+            value: 5,
+          },
+        ],
+        allNum: 1430,
+      },
+    });
+  },
+  // 年销售统计
+  'GET /api/salesStatistics': (req, res) => {
+    if (!getAccess()) {
+      res.status(401).send({
+        data: {
+          isLogin: false,
+        },
+        errorCode: '401',
+        errorMessage: '请先登录！',
+        success: true,
+      });
+      return;
+    }
+
+    res.send({
+      success: true,
+      data: [
+        {
+          year: '2010',
+          value: 31,
+          type: '图例一',
+        },
+        {
+          year: '2010',
+          value: 33,
+          type: '图例二',
+        },
+        {
+          year: '2010',
+          value: 23,
+          type: '图例三',
+        },
+        {
+          year: '2011',
+          value: 19,
+          type: '图例一',
+        },
+        {
+          year: '2011',
+          value: 18,
+          type: '图例二',
+        },
+        {
+          year: '2011',
+          value: 30,
+          type: '图例三',
+        },
+        {
+          year: '2012',
+          value: 29,
+          type: '图例一',
+        },
+        {
+          year: '2012',
+          value: 25,
+          type: '图例二',
+        },
+        {
+          year: '2012',
+          value: 10,
+          type: '图例三',
+        },
+      ]
+    });
+  },
+  // 进行中的项目
+  'GET /api/pendingProject': (req, res) => {
+    if (!getAccess()) {
+      res.status(401).send({
+        data: {
+          isLogin: false,
+        },
+        errorCode: '401',
+        errorMessage: '请先登录！',
+        success: true,
+      });
+      return;
+    }
+
+    res.send({
+      success: true,
+      data: [
+        {
+          title: '消息列表体验优化',
+          desc: '这是一条描述信息这是一条描述信息这是一条描述信息',
+          team: '复仇者联盟',
+          time: '5小时以前',
+          id: '1',
+        },
+        {
+          title: 'X平台',
+          desc: '这是一条描述信息这是一条描述信息这是一条描述信息',
+          team: 'V字仇杀队',
+          time: '5小时以前',
+          id: '2',
+        },
+        {
+          title: '消息列表体验优化',
+          desc: '这是一条描述信息这是一条描述信息这是一条描述信息',
+          team: '复仇者联盟',
+          time: '5小时以前',
+          id: '3',
+        },
+        {
+          title: 'X平台',
+          desc: '这是一条描述信息这是一条描述信息这是一条描述信息',
+          team: 'V字仇杀队',
+          time: '5小时以前',
+          id: '4',
+        },
+        {
+          title: '消息列表体验优化',
+          desc: '这是一条描述信息这是一条描述信息这是一条描述信息',
+          team: '复仇者联盟',
+          time: '5小时以前',
+          id: '5',
+        },
+        {
+          title: 'X平台',
+          desc: '这是一条描述信息这是一条描述信息这是一条描述信息',
+          team: 'V字仇杀队',
+          time: '5小时以前',
+          id: '6',
+        },
+      ]
+    });
+  },
+
+  // 门店列表
+  'GET /api/shops': (req, res) => {
+    if (!getAccess()) {
+      res.status(401).send({
+        data: {
+          isLogin: false,
+        },
+        errorCode: '401',
+        errorMessage: '请先登录！',
+        success: true,
+      });
+      return;
+    }
+
+    res.send({
+      success: true,
+      data: [
+        {
+          title: '门店一',
+          percent: 50,
+          id: '1',
+        },
+        {
+          title: '门店二',
+          percent: 30,
+          id: '2',
+        },
+        {
+          title: '门店三',
+          percent: 65,
+          id: '3',
+        },
+        {
+          title: '门店四',
+          percent: 10,
+          id: '4',
+        },
+        {
+          title: '门店五',
+          percent: 83,
+          id: '5',
+        },
+        {
+          title: '门店六',
+          percent: 49,
+          id: '6',
+        },
+        {
+          title: '门店七',
+          percent: 77,
+          id: '7',
+        },
+        {
+          title: '门店八',
+          percent: 33,
+          id: '8',
+        },
+
+      ]
+    });
+  },
+
+  // 分析页 双折线图 data
+  'GET /api/lineData': (req, res) => {
+    if (!getAccess()) {
+      res.status(401).send({
+        data: {
+          isLogin: false,
+        },
+        errorCode: '401',
+        errorMessage: '请先登录！',
+        success: true,
+      });
+      return;
+    }
+
+    res.send({
+      success: true,
+      data: [
+        {
+          year: '1991',
+          value: 3,
+          category: 'Liquid fuel',
+        },
+        {
+          year: '1992',
+          category: 'Liquid fuel',
+          value: 4,
+        },
+        {
+          year: '1993',
+          category: 'Liquid fuel',
+          value: 3.5,
+        },
+        {
+          year: '1994',
+          category: 'Liquid fuel',
+          value: 5,
+        },
+        {
+          year: '1995',
+          category: 'Liquid fuel',
+          value: 4.9,
+        },
+        {
+          year: '1991',
+          category: 'Solid fuel',
+          value: 2,
+        },
+        {
+          year: '1992',
+          category: 'Solid fuel',
+          value: 1,
+        },
+        {
+          year: '1993',
+          category: 'Solid fuel',
+          value: 6.5,
+        },
+        {
+          year: '1994',
+          category: 'Solid fuel',
+          value: 9,
+        },
+        {
+          year: '1995',
+          category: 'Solid fuel',
+          value: 1.9,
+        },
+      ]
+    });
+  },
+
   'GET  /api/login/captcha': getFakeCaptcha,
 };
